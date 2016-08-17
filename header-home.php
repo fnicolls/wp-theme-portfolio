@@ -8,17 +8,5 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="parallax"></div>
-
-	
 
 <div id="container">
-	<header id="header">
-		<?php wp_nav_menu( array(
-				'theme_location' => 'home_menu',
-				'container' 	 => 'nav',
-				'container_class'=> 'menu',
-				'menu_class' 	 => '',
-				'fallback_cb' 	 => '',
-		)); ?>
-	</header>

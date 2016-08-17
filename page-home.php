@@ -1,8 +1,6 @@
 <?php get_header('home'); ?>
 <div class="wrapper">
 <main id="content">
-<div class="dude">
-</div>
 <?php if( have_posts() ){
 		while( have_posts() ){
 			the_post();
@@ -15,30 +13,30 @@
 <?php }//end while
  }//end if ?>
 	
-	<section class="home-widg-flex">
+	<section class="home-widgs">
+		<a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>" class="hw-link">
 		<div class="home-widg">
-			<a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>"><div class="hw-img img-1"></div></a>
-			<h3 class="home-widg-h3">browse my 
-			<a href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>" class="hw-link">portfolio</a></h3>
+			<h3 class="home-widg-h3">browse my portfolio</h3>
 		</div>
+		</a>
 
+		<a href="<?php echo get_permalink( get_page_by_path( 'about' ) ) ?>" class="hw-link">
 		<div class="home-widg">
-			<a href="<?php echo get_permalink( get_page_by_path( 'about' ) ) ?>"><div class="hw-img img-2"></div></a>
-			<h3 class="home-widg-h3">peruse my 
-			<a href="<?php echo get_permalink( get_page_by_path( 'about' ) ) ?>" class="hw-link">resume</a></h3>
+			<h3 class="home-widg-h3">peruse my resume</h3>
 		</div>
+		</a>
 
+		<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" class="hw-link">
 		<div class="home-widg">
-			<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>"><div class="hw-img img-3"></div></a>
-			<h3 class="home-widg-h3">reach out &amp;
-			<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ) ?>" class="hw-link">contact me</a></h3>
+			<h3 class="home-widg-h3">contact me</h3>
 		</div>
+		</a>
 	</section>
 
 </main>
-	
+	<div class="push"></div>
 </div> <!-- wrapper -->
 
 
 
-<?php get_footer(); ?>
+<?php get_footer('contact'); ?>
